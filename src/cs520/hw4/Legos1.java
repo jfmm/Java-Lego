@@ -1,4 +1,5 @@
 package cs520.hw4;
+import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
@@ -24,10 +25,21 @@ public class Legos1 extends JFrame
 	
 	public void paint(Graphics g)
 	{
-		super.paint(g);
+		
 		
 		// use nested loops to generate legos
 		
+		for(int i = 0; i < baseLength; i++)
+			
+		{
+			
+			g.setColor(Color.blue);
+			g.fillRoundRect(startX, startY, legoWidth, legoHeight, 2, 2);
+			
+			//TODO: Must nudge on x axis position to the left
+			startX += 50;
+		
+		}
 		
 	}
 	
