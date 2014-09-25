@@ -20,6 +20,7 @@ public class Legos1 extends JFrame
 		legoWidth = 50;
 		legoHeight = 20;
 		baseLength = 10;
+		int x = 4;
 		
 	}
 	
