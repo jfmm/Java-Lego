@@ -37,6 +37,9 @@ public class Legos1 extends JFrame
 	
 			System.out.println("row#" + rows);
 			
+			// reset x position on each iteration
+			startX = 20;
+			
 			for(blocks = 11-rows; blocks >= 1; blocks--)
 			{
 				
@@ -60,7 +63,9 @@ public class Legos1 extends JFrame
 				// move block to left
 				startX += 51;
 				
-			}
+			}// end inner for
+			
+			
 			//move top row up
 			startY-=20;
 		}
