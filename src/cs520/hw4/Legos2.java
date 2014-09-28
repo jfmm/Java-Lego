@@ -2,16 +2,22 @@ package cs520.hw4;
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JFrame;
+import java.util.Random;
 
 public class Legos2 extends JFrame
 {
+	// Initialize variables and colors array
 	int startX, startY, legoHeight, legoWidth, baseLength;
+	
+	Color [] colorBucket = {Color.red, Color.blue, Color.yellow, Color.green, Color.pink, Color.black, Color.magenta, Color.orange, Color.cyan};
+	
+	
 	
 	/* GUI constructor
 	 * -----------------*/
 	public Legos2()
 	{
-		super("Leggo!!!!");
+		super("Morales Mendizabal Legos2");
 		// initialize variables 20,
 		//300, 50, 20, and 10, respectively.
 		startX = 20;
@@ -22,6 +28,7 @@ public class Legos2 extends JFrame
 	}
 	
 	
+	// Paint method
 	public void paint(Graphics g)
 	{
 
@@ -68,7 +75,11 @@ public class Legos2 extends JFrame
 			for(int blocks = 11-row; blocks >= 1; blocks--)
 			{
 				
-				g.setColor(Color.black);
+				Random randInt = new Random();
+				
+				// set each block to a random color
+				g.setColor(colorBucket[randInt.nextInt(colorBucket.length)]);
+				
 	
 				g.fillRoundRect(startX, startY, legoWidth, legoHeight, 2, 2);
 				
