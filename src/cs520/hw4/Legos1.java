@@ -67,7 +67,7 @@ public class Legos1 extends JFrame
 			}
 			
 
-			for(int blocks = 11-row; blocks >= 1; blocks--)
+			for(int blocks = 11-row; blocks <= baseLength && !(blocks == 0); blocks--)
 			{
 				
 				// alternate color
