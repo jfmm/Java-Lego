@@ -26,41 +26,68 @@ public class Legos1 extends JFrame
 	
 	public void paint(Graphics g)
 	{
-		
-		
+
 		// use nested loops to generate legos
 		
-		for(int rows = 1; rows <= baseLength; rows++)	
+		for(int row = 1; row <= baseLength; row++)	
 		{
 			
-			int blocks;
-	
-			System.out.println("row#" + rows);
+		
+			// reset x position on each iteration after first row
+			switch(row)
+			{
+			case 2: 
+				startX = 45;
+				break;
+			case 3:
+				startX = 65;
+				break;
+			case 4:
+				startX = 85;
+				break;	
+			case 5:
+				startX = 115;
+				break;
+			case 6:
+				startX = 135;
+				break;
+			case 7:
+				startX = 165;
+				break;
+			case 8:
+				startX = 185;
+				break;
+				
+			case 9:
+				startX = 205;
+				break;
+			case 10:
+				startX = 228;
+				break;
+			}
 			
-			// reset x position on each iteration
-			startX = 20;
-			
-			for(blocks = 11-rows; blocks >= 1; blocks--)
+
+			for(int blocks = 11-row; blocks >= 1; blocks--)
 			{
 				
-				System.out.println(blocks);
-				
 				// alternate color
-				if(blocks % 2 == 0) {
-					System.out.println("red");
-					g.setColor(Color.red);
+				if(blocks % 2 == 0) 
+				{
+				
+					g.setColor(Color.blue);
 					
 				}
 					
-				else{
-					System.out.println("blue");
-					g.setColor(Color.blue);
+				else
+				{
+					
+					g.setColor(Color.red);
 				}
 					
 				
 				g.fillRoundRect(startX, startY, legoWidth, legoHeight, 2, 2);
 				
-				// move block to left
+				// move block to the right of the previous block on each row
 				startX += 51;
 				
 			}// end inner for
@@ -68,6 +95,7 @@ public class Legos1 extends JFrame
 			
 			//move top row up
 			startY-=20;
+			
 		}
 		
 	}
