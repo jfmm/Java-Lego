@@ -87,13 +87,13 @@ public class Legos1 extends JFrame
 				
 				g.fillRoundRect(startX, startY, legoWidth, legoHeight, 2, 2);
 				
-				// move block to the right of the previous block on each row
-				startX += 51;
+				
+				startX += 50; // move block to the right of the previous block on each row by 50px
 				
 			}// end inner for
 			
 			
-			//move top row up
+			//move top row upward by 20px
 			startY-=20;
 			
 		}
